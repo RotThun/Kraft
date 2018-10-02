@@ -30,7 +30,7 @@ for(var w=0;w<t;w++){
 		consumption[key]=0;
 	}
 //buildings
-
+ 
 if(items["coal"]>=people["cargotrain"]*0.02){
 	consumption["coal"]+=people["cargotrain"]*0.02
 	if(trademission["trainbuy"]!="nothing" && craft["coin"]>=people["cargotrain"]*0.05){
@@ -49,7 +49,9 @@ else
 {
 bonus["auto"]=0
 }
-
+if(heirlooms[8]=="auto"){
+bonus["auto"]+=heirlooms[7]
+}
 
 if (items["coal"]>=buildings["powerplant"]*0.05 &&  items["water"]>=buildings["powerplant"]*2 && buildstatus["powerplant"]==1)
 {
@@ -290,11 +292,11 @@ if (items["food"]>=people["knight"]*2)
 
 consumption["food"]+=people["medic"]/2.5
 
-if (items["food"]>=people["bersek"]/1.25 && items["gold"]>=people["bersek"]/100)
+if (items["food"]>=people["berserk"]/1.25 && items["gold"]>=people["berserk"]/100)
 {
-	consumption["food"]+=people["bersek"]/1.25
-	consumption["gold"]+=people["bersek"]/100
-	production["morale"]+=people["bersek"]/6.25
+	consumption["food"]+=people["berserk"]/1.25
+	consumption["gold"]+=people["berserk"]/100
+	production["morale"]+=people["berserk"]/6.25
 }
 
 if (items["food"]>=people["warelephant"]*10 && items["water"]>=people["warelephant"]*2)
